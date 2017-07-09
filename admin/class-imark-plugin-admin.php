@@ -100,4 +100,16 @@ class Imark_Plugin_Admin {
 
 	}
 
+	public static function new_cpt_product() {
+		$cpt_options = [
+			'labels' => [
+				'name' 			=> __('Products'),
+				'singular_name' => __('Product'),
+			],
+			'public' => true,			
+			'menu_position' => 25
+		];
+		register_post_type ('product', $cpt_options);
+	}
+
 }
